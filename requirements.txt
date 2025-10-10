@@ -1,0 +1,20 @@
+# Core graph/memory stack
+graphiti-core[falkordb]>=0.17.0
+# Optional: enable Amazon Neptune backend evaluation
+graphiti-core[neptune]>=0.17.0
+# Optional: direct FalkorDB client for maintenance scripts
+falkordb>=0.4
+
+# Data handling & validation
+pandas>=2.0
+pydantic>=2.7
+python-dotenv>=1.0
+
+# CLI / scripting utilities
+typer>=0.12
+rich>=13.7
+
+# Experiment helpers
+requests>=2.31
+matplotlib>=3.8
+seaborn>=0.13
