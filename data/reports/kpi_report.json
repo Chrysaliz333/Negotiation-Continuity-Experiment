@@ -1,0 +1,431 @@
+{
+  "timestamp": "2025-10-15T16:18:59.301323",
+  "overall_pass": false,
+  "kpis": {
+    "clause_linkage": {
+      "kpi": "Clause Linkage",
+      "target_precision": 0.9,
+      "target_recall": 0.85,
+      "actual_precision": 1.0,
+      "actual_recall": 3.0,
+      "precision_pass": true,
+      "recall_pass": true,
+      "overall_pass": true,
+      "details": {
+        "true_positives": 84,
+        "false_positives": 0,
+        "linkable_clauses": 28,
+        "linked_clauses": 84,
+        "linkage_examples": [
+          {
+            "matter_id": "matter_001",
+            "clause_number": "1.1",
+            "versions_found": 4,
+            "linkable": true,
+            "links": 3
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_number": "10.10",
+            "versions_found": 4,
+            "linkable": true,
+            "links": 3
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_number": "2.2",
+            "versions_found": 4,
+            "linkable": true,
+            "links": 3
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_number": "3.3",
+            "versions_found": 4,
+            "linkable": true,
+            "links": 3
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_number": "4.4",
+            "versions_found": 4,
+            "linkable": true,
+            "links": 3
+          }
+        ]
+      }
+    },
+    "recommendation_adherence": {
+      "kpi": "Recommendation Adherence",
+      "target": 0.75,
+      "actual": 0.6176470588235294,
+      "pass": false,
+      "details": {
+        "applied_recommendations": 34,
+        "not_repeated": 21,
+        "repeated": 13,
+        "examples": [
+          {
+            "matter_id": "matter_001",
+            "clause_number": "10.10",
+            "version": 1,
+            "issue_type": "Risk Allocation",
+            "classification": "unfavorable",
+            "repeated_in_later_versions": false
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_number": "2.2",
+            "version": 1,
+            "issue_type": "Ambiguity",
+            "classification": "requires_clarification",
+            "repeated_in_later_versions": false
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_number": "3.3",
+            "version": 1,
+            "issue_type": "One-Sided Term",
+            "classification": "unfavorable",
+            "repeated_in_later_versions": false
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_number": "3.3",
+            "version": 1,
+            "issue_type": "Ambiguity",
+            "classification": "favorable",
+            "repeated_in_later_versions": true
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_number": "3.3",
+            "version": 2,
+            "issue_type": "Ambiguity",
+            "classification": "favorable",
+            "repeated_in_later_versions": true
+          }
+        ]
+      }
+    },
+    "handover_completeness": {
+      "kpi": "Handover Context Completeness",
+      "target": 0.95,
+      "actual": 1.0,
+      "pass": true,
+      "details": {
+        "versions_measured": 12,
+        "average_completeness": 1.0,
+        "completeness_scores": [
+          {
+            "matter_id": "matter_001",
+            "version": 1,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 10,
+              "recommendations": 10,
+              "decisions": 10,
+              "concessions": 2
+            }
+          },
+          {
+            "matter_id": "matter_001",
+            "version": 2,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 10,
+              "recommendations": 4,
+              "decisions": 4,
+              "concessions": 1
+            }
+          },
+          {
+            "matter_id": "matter_001",
+            "version": 3,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 10,
+              "recommendations": 3,
+              "decisions": 3,
+              "concessions": 1
+            }
+          },
+          {
+            "matter_id": "matter_001",
+            "version": 4,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 10,
+              "recommendations": 0,
+              "decisions": 0,
+              "concessions": 0
+            }
+          },
+          {
+            "matter_id": "matter_002",
+            "version": 1,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 10,
+              "recommendations": 8,
+              "decisions": 8,
+              "concessions": 0
+            }
+          },
+          {
+            "matter_id": "matter_002",
+            "version": 2,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 10,
+              "recommendations": 5,
+              "decisions": 5,
+              "concessions": 0
+            }
+          },
+          {
+            "matter_id": "matter_002",
+            "version": 3,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 10,
+              "recommendations": 1,
+              "decisions": 1,
+              "concessions": 0
+            }
+          },
+          {
+            "matter_id": "matter_002",
+            "version": 4,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 10,
+              "recommendations": 0,
+              "decisions": 0,
+              "concessions": 0
+            }
+          },
+          {
+            "matter_id": "matter_003",
+            "version": 1,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 8,
+              "recommendations": 8,
+              "decisions": 8,
+              "concessions": 0
+            }
+          },
+          {
+            "matter_id": "matter_003",
+            "version": 2,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 8,
+              "recommendations": 3,
+              "decisions": 3,
+              "concessions": 0
+            }
+          },
+          {
+            "matter_id": "matter_003",
+            "version": 3,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 8,
+              "recommendations": 1,
+              "decisions": 1,
+              "concessions": 0
+            }
+          },
+          {
+            "matter_id": "matter_003",
+            "version": 4,
+            "completeness": 1.0,
+            "elements": {
+              "matter": 1,
+              "parties": 8,
+              "clauses": 8,
+              "recommendations": 0,
+              "decisions": 0,
+              "concessions": 0
+            }
+          }
+        ]
+      }
+    },
+    "concession_visibility": {
+      "kpi": "Concession Visibility Latency",
+      "target_seconds": 120,
+      "actual_seconds": 0.0018301010131835938,
+      "actual_milliseconds": 1.8301010131835938,
+      "pass": true,
+      "details": {
+        "concessions_found": 8,
+        "query_time_ms": 1.8301010131835938,
+        "concessions": [
+          {
+            "matter_id": "matter_001",
+            "clause_id": "clause_1826c7c4f76e928f",
+            "clause_number": "1.1",
+            "clause_title": "Limitation of Liability",
+            "actor": "Emily Thompson",
+            "description": "Conceded on Limitation of Liability to maintain commercial momentum.",
+            "impact": "medium",
+            "rationale": "Acceptable risk given overall contract value and relationship importance.",
+            "timestamp": "2025-07-19T05:37:14.353064Z"
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_id": "clause_1826c7c4f76e928f",
+            "clause_number": "1.1",
+            "clause_title": "Limitation of Liability",
+            "actor": "Emily Thompson",
+            "description": "Conceded on Limitation of Liability to maintain commercial momentum.",
+            "impact": "medium",
+            "rationale": "Acceptable risk given overall contract value and relationship importance.",
+            "timestamp": "2025-07-19T05:37:14.353064Z"
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_id": "clause_1826c7c4f76e928f",
+            "clause_number": "1.1",
+            "clause_title": "Limitation of Liability",
+            "actor": "Emily Thompson",
+            "description": "Conceded on Limitation of Liability to maintain commercial momentum.",
+            "impact": "medium",
+            "rationale": "Acceptable risk given overall contract value and relationship importance.",
+            "timestamp": "2025-07-19T05:37:14.353064Z"
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_id": "clause_1826c7c4f76e928f",
+            "clause_number": "1.1",
+            "clause_title": "Limitation of Liability",
+            "actor": "Emily Thompson",
+            "description": "Conceded on Limitation of Liability to maintain commercial momentum.",
+            "impact": "medium",
+            "rationale": "Acceptable risk given overall contract value and relationship importance.",
+            "timestamp": "2025-07-19T05:37:14.353064Z"
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_id": "clause_1826c7c4f76e928f",
+            "clause_number": "1.1",
+            "clause_title": "Limitation of Liability",
+            "actor": "Jessica Martinez",
+            "description": "Override of Risk Allocation recommendation - retaining current clause language.",
+            "impact": "low",
+            "rationale": "Limited practical impact based on historical experience.",
+            "timestamp": "2025-07-19T22:37:14.353064Z"
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_id": "clause_1826c7c4f76e928f",
+            "clause_number": "1.1",
+            "clause_title": "Limitation of Liability",
+            "actor": "Jessica Martinez",
+            "description": "Override of Risk Allocation recommendation - retaining current clause language.",
+            "impact": "low",
+            "rationale": "Limited practical impact based on historical experience.",
+            "timestamp": "2025-07-19T22:37:14.353064Z"
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_id": "clause_1826c7c4f76e928f",
+            "clause_number": "1.1",
+            "clause_title": "Limitation of Liability",
+            "actor": "Jessica Martinez",
+            "description": "Override of Risk Allocation recommendation - retaining current clause language.",
+            "impact": "low",
+            "rationale": "Limited practical impact based on historical experience.",
+            "timestamp": "2025-07-19T22:37:14.353064Z"
+          },
+          {
+            "matter_id": "matter_001",
+            "clause_id": "clause_1826c7c4f76e928f",
+            "clause_number": "1.1",
+            "clause_title": "Limitation of Liability",
+            "actor": "Jessica Martinez",
+            "description": "Override of Risk Allocation recommendation - retaining current clause language.",
+            "impact": "low",
+            "rationale": "Limited practical impact based on historical experience.",
+            "timestamp": "2025-07-19T22:37:14.353064Z"
+          }
+        ]
+      }
+    },
+    "query_performance": {
+      "kpi": "Query Performance",
+      "target_ms": 5000,
+      "actual_avg_ms": 1.201629638671875,
+      "pass": true,
+      "details": {
+        "queries_tested": 6,
+        "average_latency_ms": 1.201629638671875,
+        "max_latency_ms": 2.834796905517578,
+        "min_latency_ms": 0.3180503845214844,
+        "query_results": [
+          {
+            "name": "Cross-Version Clause Tracking",
+            "latency_ms": 0.3559589385986328,
+            "rows_returned": 4,
+            "pass": true
+          },
+          {
+            "name": "All Unfavorable Recommendations",
+            "latency_ms": 1.405954360961914,
+            "rows_returned": 10,
+            "pass": true
+          },
+          {
+            "name": "Decisions by Actor",
+            "latency_ms": 0.4801750183105469,
+            "rows_returned": 8,
+            "pass": true
+          },
+          {
+            "name": "Cross-Matter Precedent Search",
+            "latency_ms": 2.834796905517578,
+            "rows_returned": 20,
+            "pass": true
+          },
+          {
+            "name": "Recommendation Coverage",
+            "latency_ms": 1.8148422241210938,
+            "rows_returned": 12,
+            "pass": true
+          },
+          {
+            "name": "Decision Type Distribution",
+            "latency_ms": 0.3180503845214844,
+            "rows_returned": 3,
+            "pass": true
+          }
+        ]
+      }
+    }
+  }
+}

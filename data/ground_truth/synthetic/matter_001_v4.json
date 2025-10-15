@@ -1,0 +1,101 @@
+{
+  "matter_id": "matter_001",
+  "matter_type": "software_services",
+  "version": 4,
+  "timestamp": "2025-08-28T15:37:14.353064Z",
+  "parties": {
+    "provider": {
+      "name": "CloudTech Solutions Ltd",
+      "role": "Service Provider"
+    },
+    "customer": {
+      "name": "DataCorp Industries PLC",
+      "role": "Customer"
+    }
+  },
+  "clauses": [
+    {
+      "clause_id": "clause_1826c7c4f76e928f",
+      "clause_number": "1.1",
+      "title": "Limitation of Liability",
+      "text": "CloudTech Solutions Ltd's aggregate liability to DataCorp Industries PLC under this Agreement, whether arising in contract, tort (including negligence), or otherwise, shall not exceed in any consecutive 12-month period the greater of: (a) 100% of the total fees paid or payable by DataCorp Industries PLC to CloudTech Solutions Ltd during such 12-month period; or (b) £1,000,000.",
+      "category": "Liability and Risk",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_145e0c6656633588",
+      "clause_number": "2.2",
+      "title": "Unlimited Liability Carve-Outs",
+      "text": "Nothing in this Agreement shall, subject to reasonable efforts, limit or exclude either Party's liability for: (a) death or personal injury caused by its negligence; (b) fraud or fraudulent misrepresentation; (c) gross negligence; (d) breach of data protection obligations; (e) infringement of Intellectual Property Rights.",
+      "category": "Liability and Risk",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_dcd3e96e9cf278a7",
+      "clause_number": "3.3",
+      "title": "Service Level - Availability",
+      "text": "CloudTech Solutions Ltd shall maintain Standard Services availability of 99.9% during Business Hours, measured monthly. Availability calculations shall exclude scheduled maintenance windows not exceeding 6 hours per month with 5 Business Days' advance notice.",
+      "category": "Service Levels",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_870d90fbd232deff",
+      "clause_number": "4.4",
+      "title": "Service Credits",
+      "text": "Each Party shall have reciprocal obligations. For each 1.0% shortfall below target availability, DataCorp Industries PLC shall receive service credits equal to 5% of monthly fees for the affected Services. Total service credits in any calendar month shall not exceed 15% of monthly fees.",
+      "category": "Service Levels",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_2bdcdc94c8322a61",
+      "clause_number": "5.5",
+      "title": "Data Breach Notification",
+      "text": "CloudTech Solutions Ltd must promptly notify DataCorp Industries PLC within 48 hours of discovery of any actual or suspected security incident or Personal Data breach. CloudTech Solutions Ltd must cooperate in all investigations and notify Data Subjects and regulators as required by law.",
+      "category": "Data Protection",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_7e43430db88b26c6",
+      "clause_number": "6.6",
+      "title": "Data Breach Indemnity",
+      "text": "CloudTech Solutions Ltd shall, subject to reasonable efforts, indemnify, defend, and hold harmless DataCorp Industries PLC from and against any losses, damages, costs, and expenses arising from any Personal Data breach caused by CloudTech Solutions Ltd or its subcontractors, capped at 120% of annual fees except for willful misconduct.",
+      "category": "Data Protection",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_9599020f920cf7fc",
+      "clause_number": "7.7",
+      "title": "Termination for Convenience",
+      "text": "Either Party may terminate this Agreement for convenience upon 30 days' prior written notice to the other Party, subject to payment of a termination fee equal to six months' fees.",
+      "category": "Term and Termination",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_2d1559c2319f6214",
+      "clause_number": "8.8",
+      "title": "Intellectual Property Ownership",
+      "text": "All Deliverables, work product, and Intellectual Property created by CloudTech Solutions Ltd under this Agreement shall be owned by CloudTech Solutions Ltd. CloudTech Solutions Ltd hereby assigns all rights, title, and interest in such IP to CloudTech Solutions Ltd.",
+      "category": "Intellectual Property",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_8d694fdee2b77029",
+      "clause_number": "9.9",
+      "title": "Confidentiality Obligations",
+      "text": "Each Party shall maintain the confidentiality of the other Party's Confidential Information and use it solely for purposes of this Agreement. These obligations shall survive termination for a period of 3 years.",
+      "category": "Confidentiality",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_3a5c930fc8de177a",
+      "clause_number": "10.10",
+      "title": "Payment Terms",
+      "text": "Each Party shall have reciprocal obligations. DataCorp Industries PLC shall pay all undisputed invoices within 45 days of receipt. Late payments shall accrue interest at 2.0% per annum. DataCorp Industries PLC may dispute invoices in good faith within 10 days.",
+      "category": "Fees and Payment",
+      "version": 4
+    }
+  ],
+  "recommendations": [],
+  "decisions": [],
+  "concessions": []
+}

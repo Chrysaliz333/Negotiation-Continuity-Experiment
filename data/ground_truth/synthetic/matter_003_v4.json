@@ -1,0 +1,85 @@
+{
+  "matter_id": "matter_003",
+  "matter_type": "data_processing",
+  "version": 4,
+  "timestamp": "2025-08-28T15:37:14.356173Z",
+  "parties": {
+    "provider": {
+      "name": "SecureData Processing Ltd",
+      "role": "Service Provider"
+    },
+    "customer": {
+      "name": "FinServe Global Inc",
+      "role": "Customer"
+    }
+  },
+  "clauses": [
+    {
+      "clause_id": "clause_8a50ee6255cf2174",
+      "clause_number": "1.1",
+      "title": "Limitation of Liability",
+      "text": "SecureData Processing Ltd's aggregate liability to FinServe Global Inc under this Agreement, whether arising in contract, tort (including negligence), or otherwise, shall not exceed in any consecutive 12-month period the greater of: (a) 100% of the total fees paid or payable by FinServe Global Inc to SecureData Processing Ltd during such 12-month period; or (b) £3,500,000.",
+      "category": "Liability and Risk",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_49f7c3f2de285fd5",
+      "clause_number": "2.2",
+      "title": "Data Breach Notification",
+      "text": "Each Party shall have reciprocal obligations. SecureData Processing Ltd must promptly notify FinServe Global Inc within 4 hours of discovery of any actual or suspected security incident or Personal Data breach. SecureData Processing Ltd must cooperate in all investigations and notify Data Subjects and regulators as required by law.",
+      "category": "Data Protection",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_2ef111af30a5a195",
+      "clause_number": "3.3",
+      "title": "Data Breach Indemnity",
+      "text": "SecureData Processing Ltd shall indemnify, defend, and hold harmless FinServe Global Inc from and against any losses, damages, costs, and expenses arising from any Personal Data breach caused by SecureData Processing Ltd or its subcontractors.",
+      "category": "Data Protection",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_cd0fa76a7408a5c5",
+      "clause_number": "4.4",
+      "title": "Audit Rights",
+      "text": "FinServe Global Inc shall, subject to reasonable efforts, have the right to conduct audits of SecureData Processing Ltd's performance and compliance up to twice per year upon 10 Business Days' advance notice. Such audit rights shall survive termination for a period of six (6) months.",
+      "category": "Compliance",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_09cbfb9ec08f1fe9",
+      "clause_number": "5.5",
+      "title": "Termination for Convenience",
+      "text": "No Party may terminate this Agreement for convenience upon 120 days' prior written notice to the other Party.",
+      "category": "Term and Termination",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_06a4c813bb0f52f1",
+      "clause_number": "6.6",
+      "title": "Confidentiality Obligations",
+      "text": "Each Party shall maintain the confidentiality of the other Party's Confidential Information and use it solely for purposes of this Agreement. These obligations shall survive termination for a period of 3 years, except for information that (a) is publicly available, (b) is independently developed, or (c) is required by law to be disclosed.",
+      "category": "Confidentiality",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_050608e0e8bedf72",
+      "clause_number": "7.7",
+      "title": "Payment Terms",
+      "text": "FinServe Global Inc shall pay all undisputed invoices within 30 days of receipt. Late payments shall accrue interest at 1.5% per annum. FinServe Global Inc may dispute invoices in good faith within 10 days.",
+      "category": "Fees and Payment",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_9669dbff137ed3de",
+      "clause_number": "8.8",
+      "title": "Insurance Requirements",
+      "text": "SecureData Processing Ltd shall maintain the following insurance coverage throughout the term: (a) Professional Indemnity Insurance of at least £1,000,000; (b) Cyber Liability Insurance of at least £1,000,000; (c) General Liability Insurance of at least £2,000,000.",
+      "category": "Insurance",
+      "version": 4
+    }
+  ],
+  "recommendations": [],
+  "decisions": [],
+  "concessions": []
+}

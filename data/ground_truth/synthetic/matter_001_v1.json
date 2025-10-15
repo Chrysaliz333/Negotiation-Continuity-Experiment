@@ -1,0 +1,214 @@
+{
+  "matter_id": "matter_001",
+  "matter_type": "software_services",
+  "version": 1,
+  "timestamp": "2025-07-17T15:37:14.353064Z",
+  "parties": {
+    "provider": {
+      "name": "CloudTech Solutions Ltd",
+      "role": "Service Provider"
+    },
+    "customer": {
+      "name": "DataCorp Industries PLC",
+      "role": "Customer"
+    }
+  },
+  "clauses": [
+    {
+      "clause_id": "clause_1826c7c4f76e928f",
+      "clause_number": "1.1",
+      "title": "Limitation of Liability",
+      "text": "CloudTech Solutions Ltd's aggregate liability to DataCorp Industries PLC under this Agreement, whether arising in contract, tort (including negligence), or otherwise, shall not exceed in any consecutive 12-month period the greater of: (a) 100% of the total fees paid or payable by DataCorp Industries PLC to CloudTech Solutions Ltd during such 12-month period; or (b) £1,000,000.",
+      "category": "Liability and Risk",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_b0b523f60287d9ff",
+      "clause_number": "2.2",
+      "title": "Unlimited Liability Carve-Outs",
+      "text": "Nothing in this Agreement shall limit or exclude either Party's liability for: (a) death or personal injury caused by its negligence; (b) fraud or fraudulent misrepresentation; (c) gross negligence; (d) breach of data protection obligations; (e) infringement of Intellectual Property Rights.",
+      "category": "Liability and Risk",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_dcd3e96e9cf278a7",
+      "clause_number": "3.3",
+      "title": "Service Level - Availability",
+      "text": "CloudTech Solutions Ltd shall maintain Standard Services availability of 99.9% during Business Hours, measured monthly. Availability calculations shall exclude scheduled maintenance windows not exceeding 6 hours per month with 5 Business Days' advance notice.",
+      "category": "Service Levels",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_a3436fa097a6e020",
+      "clause_number": "4.4",
+      "title": "Service Credits",
+      "text": "For each 1.0% shortfall below target availability, DataCorp Industries PLC shall receive service credits equal to 5% of monthly fees for the affected Services. Total service credits in any calendar month shall not exceed 15% of monthly fees.",
+      "category": "Service Levels",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_2bdcdc94c8322a61",
+      "clause_number": "5.5",
+      "title": "Data Breach Notification",
+      "text": "CloudTech Solutions Ltd must promptly notify DataCorp Industries PLC within 48 hours of discovery of any actual or suspected security incident or Personal Data breach. CloudTech Solutions Ltd must cooperate in all investigations and notify Data Subjects and regulators as required by law.",
+      "category": "Data Protection",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_a3bafb68610e3096",
+      "clause_number": "6.6",
+      "title": "Data Breach Indemnity",
+      "text": "CloudTech Solutions Ltd shall indemnify, defend, and hold harmless DataCorp Industries PLC from and against any losses, damages, costs, and expenses arising from any Personal Data breach caused by CloudTech Solutions Ltd or its subcontractors, capped at 150% of annual fees except for willful misconduct.",
+      "category": "Data Protection",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_9599020f920cf7fc",
+      "clause_number": "7.7",
+      "title": "Termination for Convenience",
+      "text": "Either Party may terminate this Agreement for convenience upon 30 days' prior written notice to the other Party, subject to payment of a termination fee equal to six months' fees.",
+      "category": "Term and Termination",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_2d1559c2319f6214",
+      "clause_number": "8.8",
+      "title": "Intellectual Property Ownership",
+      "text": "All Deliverables, work product, and Intellectual Property created by CloudTech Solutions Ltd under this Agreement shall be owned by CloudTech Solutions Ltd. CloudTech Solutions Ltd hereby assigns all rights, title, and interest in such IP to CloudTech Solutions Ltd.",
+      "category": "Intellectual Property",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_8d694fdee2b77029",
+      "clause_number": "9.9",
+      "title": "Confidentiality Obligations",
+      "text": "Each Party shall maintain the confidentiality of the other Party's Confidential Information and use it solely for purposes of this Agreement. These obligations shall survive termination for a period of 3 years.",
+      "category": "Confidentiality",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_126ee36f2a3e5cca",
+      "clause_number": "10.10",
+      "title": "Payment Terms",
+      "text": "DataCorp Industries PLC shall pay all undisputed invoices within 45 days of receipt. Late payments shall accrue interest at 2.0% per annum. DataCorp Industries PLC may dispute invoices in good faith within 10 days.",
+      "category": "Fees and Payment",
+      "version": 1
+    }
+  ],
+  "recommendations": [
+    {
+      "recommendation_id": "rec_cea66e0d1529e97b",
+      "clause_id": "clause_1826c7c4f76e928f",
+      "issue_type": "Risk Allocation",
+      "classification": "unfavorable",
+      "reasoning": "The Limitation of Liability exposes the Service Provider to liability exposure beyond reasonable commercial expectations. This creates significant financial risk that is disproportionate to the contract value.",
+      "recommended_action": "Introduce a cap on unlimited liability at 100% of annual fees or £2M to limit maximum exposure."
+    },
+    {
+      "recommendation_id": "rec_20da8b0ce4bbd418",
+      "clause_id": "clause_b0b523f60287d9ff",
+      "issue_type": "Ambiguity",
+      "classification": "requires_clarification",
+      "reasoning": "The clause lacks clarity on compliance standards, making it difficult to determine compliance obligations or measure performance.",
+      "recommended_action": "Replace 'promptly notify' with objective standard such as 'notify within 24 hours'."
+    },
+    {
+      "recommendation_id": "rec_a203c76fc78c702e",
+      "clause_id": "clause_dcd3e96e9cf278a7",
+      "issue_type": "One-Sided Term",
+      "classification": "unfavorable",
+      "reasoning": "Only the Service Provider has {obligation_type}, while the Customer has no equivalent responsibility, which is commercially unreasonable.",
+      "recommended_action": "Add reciprocal indemnification for Customer to create balanced obligations."
+    },
+    {
+      "recommendation_id": "rec_c7a0ce1466420438",
+      "clause_id": "clause_2bdcdc94c8322a61",
+      "issue_type": "Risk Allocation",
+      "classification": "requires_clarification",
+      "reasoning": "The allocation of liability exposure is heavily weighted against the Service Provider, with insufficient protections or caps in place.",
+      "recommended_action": "Introduce a cap on unlimited liability at 100% of annual fees or £2M to limit maximum exposure."
+    },
+    {
+      "recommendation_id": "rec_e8554bd9aa513e9f",
+      "clause_id": "clause_2d1559c2319f6214",
+      "issue_type": "Risk Allocation",
+      "classification": "unfavorable",
+      "reasoning": "The Intellectual Property Ownership lacks reciprocal obligations, creating a one-sided risk allocation that could result in significant unbudgeted costs.",
+      "recommended_action": "Introduce a cap on unlimited liability at 100% of annual fees or £2M to limit maximum exposure."
+    },
+    {
+      "recommendation_id": "rec_bdd3013ac3b8fb80",
+      "clause_id": "clause_126ee36f2a3e5cca",
+      "issue_type": "Risk Allocation",
+      "classification": "unfavorable",
+      "reasoning": "The allocation of liability exposure is heavily weighted against the Service Provider, with insufficient protections or caps in place.",
+      "recommended_action": "Propose reducing liability cap to 100% of annual fees or £2M to align with industry standards and contract value."
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "dec_597154ecf63989e1",
+      "recommendation_id": "rec_cea66e0d1529e97b",
+      "decision_type": "override",
+      "actor": "Jessica Martinez",
+      "role": "Senior Counsel",
+      "timestamp": "2025-07-19T22:37:14.353064Z",
+      "notes": "Commercial precedent exists with other customers at these terms."
+    },
+    {
+      "decision_id": "dec_93b5078a1e08d754",
+      "recommendation_id": "rec_20da8b0ce4bbd418",
+      "decision_type": "apply",
+      "actor": "Rachel Kim",
+      "role": "Partner",
+      "timestamp": "2025-07-18T12:37:14.353064Z",
+      "notes": "Agreed - Replace 'promptly notify' with objective standard such as 'notify within 24 hour..."
+    },
+    {
+      "decision_id": "dec_f7f7eff3dc970023",
+      "recommendation_id": "rec_a203c76fc78c702e",
+      "decision_type": "apply",
+      "actor": "Emily Thompson",
+      "role": "Associate",
+      "timestamp": "2025-07-17T21:37:14.353064Z",
+      "notes": "Approved as recommended by legal team."
+    },
+    {
+      "decision_id": "dec_8f379596563bc531",
+      "recommendation_id": "rec_c7a0ce1466420438",
+      "decision_type": "apply",
+      "actor": "Sarah Chen",
+      "role": "Senior Associate",
+      "timestamp": "2025-07-18T21:37:14.353064Z",
+      "notes": "Agreed - Introduce a cap on unlimited liability at 100% of annual fees or £2M to limit ma..."
+    },
+    {
+      "decision_id": "dec_d7b2fb8f1fce20be",
+      "recommendation_id": "rec_e8554bd9aa513e9f",
+      "decision_type": "apply",
+      "actor": "James Wilson",
+      "role": "Associate",
+      "timestamp": "2025-07-20T12:37:14.353064Z",
+      "notes": "Accept recommendation. Risk Allocation is significant risk."
+    },
+    {
+      "decision_id": "dec_05fd364b9bbcebd6",
+      "recommendation_id": "rec_bdd3013ac3b8fb80",
+      "decision_type": "apply",
+      "actor": "Jessica Martinez",
+      "role": "Senior Counsel",
+      "timestamp": "2025-07-18T19:37:14.353064Z",
+      "notes": "Approved as recommended by legal team."
+    }
+  ],
+  "concessions": [
+    {
+      "concession_id": "con_5cb3d89dd4d88ab7",
+      "decision_id": "dec_597154ecf63989e1",
+      "clause_id": "clause_1826c7c4f76e928f",
+      "description": "Override of Risk Allocation recommendation - retaining current clause language.",
+      "impact": "low",
+      "rationale": "Limited practical impact based on historical experience."
+    }
+  ]
+}

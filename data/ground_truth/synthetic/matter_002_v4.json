@@ -1,0 +1,101 @@
+{
+  "matter_id": "matter_002",
+  "matter_type": "professional_services",
+  "version": 4,
+  "timestamp": "2025-08-28T15:37:14.354941Z",
+  "parties": {
+    "provider": {
+      "name": "Acme Consulting Partners",
+      "role": "Service Provider"
+    },
+    "customer": {
+      "name": "Widget Manufacturing Corp",
+      "role": "Customer"
+    }
+  },
+  "clauses": [
+    {
+      "clause_id": "clause_f280f81fd5a7b042",
+      "clause_number": "1.1",
+      "title": "Limitation of Liability",
+      "text": "Each Party shall have reciprocal obligations. Acme Consulting Partners's aggregate liability to Widget Manufacturing Corp under this Agreement, whether arising in contract, tort (including negligence), or otherwise, shall not exceed in any consecutive 12-month period the greater of: (a) 120% of the total fees paid or payable by Widget Manufacturing Corp to Acme Consulting Partners during such 12-month period; or (b) £5,000,000.",
+      "category": "Liability and Risk",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_145e0c6656633588",
+      "clause_number": "2.2",
+      "title": "Unlimited Liability Carve-Outs",
+      "text": "Nothing in this Agreement shall, subject to reasonable efforts, limit or exclude either Party's liability for: (a) death or personal injury caused by its negligence; (b) fraud or fraudulent misrepresentation; (c) willful misconduct only.",
+      "category": "Liability and Risk",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_f38de7fc631fc06b",
+      "clause_number": "3.3",
+      "title": "Service Credits",
+      "text": "Each Party shall have reciprocal obligations. For each 1.0% shortfall below target availability, Widget Manufacturing Corp shall receive service credits equal to 1% of monthly fees for the affected Services. Total service credits in any calendar month shall not exceed 20% of monthly fees.",
+      "category": "Service Levels",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_de33bce403df3244",
+      "clause_number": "4.4",
+      "title": "Data Breach Notification",
+      "text": "Acme Consulting Partners must promptly notify Widget Manufacturing Corp within 12 hours of discovery of any actual or suspected security incident or Personal Data breach. Acme Consulting Partners must cooperate in all investigations and notify Data Subjects and regulators as required by law.",
+      "category": "Data Protection",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_5feeaf92be277a89",
+      "clause_number": "5.5",
+      "title": "Audit Rights",
+      "text": "Widget Manufacturing Corp shall have the right to conduct audits of Acme Consulting Partners's performance and compliance up to twice per year upon 30 Business Days' advance notice. Such audit rights shall survive termination for a period of two (2) years.",
+      "category": "Compliance",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_9f071f4c9b5933c0",
+      "clause_number": "6.6",
+      "title": "Termination for Convenience",
+      "text": "No Party may terminate this Agreement for convenience upon 30 days' prior written notice to the other Party.",
+      "category": "Term and Termination",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_93c6c0c1b7304be3",
+      "clause_number": "7.7",
+      "title": "Intellectual Property Ownership",
+      "text": "All Deliverables, work product, and Intellectual Property created by Acme Consulting Partners under this Agreement shall be owned by Acme Consulting Partners. Acme Consulting Partners hereby assigns all rights, title, and interest in such IP to Acme Consulting Partners.",
+      "category": "Intellectual Property",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_fdd0f7c08a480183",
+      "clause_number": "8.8",
+      "title": "Confidentiality Obligations",
+      "text": "Each Party shall maintain the confidentiality of the other Party's Confidential Information and use it solely for purposes of this Agreement. These obligations shall survive termination for a period of 2 years.",
+      "category": "Confidentiality",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_69bd166c47b01c50",
+      "clause_number": "9.9",
+      "title": "Payment Terms",
+      "text": "Widget Manufacturing Corp shall pay all undisputed invoices within 15 days of receipt. Late payments shall accrue interest at 1.5% per annum.",
+      "category": "Fees and Payment",
+      "version": 4
+    },
+    {
+      "clause_id": "clause_5863c0933ccb714a",
+      "clause_number": "10.10",
+      "title": "Insurance Requirements",
+      "text": "Acme Consulting Partners shall maintain the following insurance coverage throughout the term: (a) Professional Indemnity Insurance of at least £2,000,000; (b) Cyber Liability Insurance of at least £1,000,000; (c) General Liability Insurance of at least £2,000,000.",
+      "category": "Insurance",
+      "version": 4
+    }
+  ],
+  "recommendations": [],
+  "decisions": [],
+  "concessions": []
+}

@@ -1,0 +1,172 @@
+{
+  "matter_id": "matter_003",
+  "matter_type": "data_processing",
+  "version": 1,
+  "timestamp": "2025-07-17T15:37:14.356173Z",
+  "parties": {
+    "provider": {
+      "name": "SecureData Processing Ltd",
+      "role": "Service Provider"
+    },
+    "customer": {
+      "name": "FinServe Global Inc",
+      "role": "Customer"
+    }
+  },
+  "clauses": [
+    {
+      "clause_id": "clause_8a50ee6255cf2174",
+      "clause_number": "1.1",
+      "title": "Limitation of Liability",
+      "text": "SecureData Processing Ltd's aggregate liability to FinServe Global Inc under this Agreement, whether arising in contract, tort (including negligence), or otherwise, shall not exceed in any consecutive 12-month period the greater of: (a) 125% of the total fees paid or payable by FinServe Global Inc to SecureData Processing Ltd during such 12-month period; or (b) £3,500,000.",
+      "category": "Liability and Risk",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_c3ad87b56af2a188",
+      "clause_number": "2.2",
+      "title": "Data Breach Notification",
+      "text": "SecureData Processing Ltd must promptly notify FinServe Global Inc within 4 hours of discovery of any actual or suspected security incident or Personal Data breach. SecureData Processing Ltd must cooperate in all investigations and notify Data Subjects and regulators as required by law.",
+      "category": "Data Protection",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_2ef111af30a5a195",
+      "clause_number": "3.3",
+      "title": "Data Breach Indemnity",
+      "text": "SecureData Processing Ltd shall indemnify, defend, and hold harmless FinServe Global Inc from and against any losses, damages, costs, and expenses arising from any Personal Data breach caused by SecureData Processing Ltd or its subcontractors.",
+      "category": "Data Protection",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_96c16bd16d246e80",
+      "clause_number": "4.4",
+      "title": "Audit Rights",
+      "text": "FinServe Global Inc shall have the right to conduct audits of SecureData Processing Ltd's performance and compliance up to twice per year upon 10 Business Days' advance notice. Such audit rights shall survive termination for a period of six (6) months.",
+      "category": "Compliance",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_09cbfb9ec08f1fe9",
+      "clause_number": "5.5",
+      "title": "Termination for Convenience",
+      "text": "No Party may terminate this Agreement for convenience upon 120 days' prior written notice to the other Party.",
+      "category": "Term and Termination",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_06a4c813bb0f52f1",
+      "clause_number": "6.6",
+      "title": "Confidentiality Obligations",
+      "text": "Each Party shall maintain the confidentiality of the other Party's Confidential Information and use it solely for purposes of this Agreement. These obligations shall survive termination for a period of 3 years, except for information that (a) is publicly available, (b) is independently developed, or (c) is required by law to be disclosed.",
+      "category": "Confidentiality",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_050608e0e8bedf72",
+      "clause_number": "7.7",
+      "title": "Payment Terms",
+      "text": "FinServe Global Inc shall pay all undisputed invoices within 30 days of receipt. Late payments shall accrue interest at 1.5% per annum. FinServe Global Inc may dispute invoices in good faith within 10 days.",
+      "category": "Fees and Payment",
+      "version": 1
+    },
+    {
+      "clause_id": "clause_9669dbff137ed3de",
+      "clause_number": "8.8",
+      "title": "Insurance Requirements",
+      "text": "SecureData Processing Ltd shall maintain the following insurance coverage throughout the term: (a) Professional Indemnity Insurance of at least £1,000,000; (b) Cyber Liability Insurance of at least £1,000,000; (c) General Liability Insurance of at least £2,000,000.",
+      "category": "Insurance",
+      "version": 1
+    }
+  ],
+  "recommendations": [
+    {
+      "recommendation_id": "rec_dfdc61ce232e6cf1",
+      "clause_id": "clause_8a50ee6255cf2174",
+      "issue_type": "Risk Allocation",
+      "classification": "favorable",
+      "reasoning": "The Limitation of Liability exposes the Service Provider to liability exposure beyond reasonable commercial expectations. This creates significant financial risk that is disproportionate to the contract value.",
+      "recommended_action": "Propose reducing liability cap to 100% of annual fees or £2M to align with industry standards and contract value."
+    },
+    {
+      "recommendation_id": "rec_e73bd89db5764380",
+      "clause_id": "clause_c3ad87b56af2a188",
+      "issue_type": "Risk Allocation",
+      "classification": "favorable",
+      "reasoning": "The Data Breach Notification exposes the Service Provider to liability exposure beyond reasonable commercial expectations. This creates significant financial risk that is disproportionate to the contract value.",
+      "recommended_action": "Introduce a cap on unlimited liability at 100% of annual fees or £2M to limit maximum exposure."
+    },
+    {
+      "recommendation_id": "rec_7047ea9de327243b",
+      "clause_id": "clause_2ef111af30a5a195",
+      "issue_type": "Commercial Imbalance",
+      "classification": "requires_clarification",
+      "reasoning": "The liability cap is significantly more onerous than market standards for comparable agreements, potentially impacting risk management.",
+      "recommended_action": "Adjust service credit cap to 15-20% to align with industry standards."
+    },
+    {
+      "recommendation_id": "rec_24e4a3c49f04e5b1",
+      "clause_id": "clause_96c16bd16d246e80",
+      "issue_type": "One-Sided Term",
+      "classification": "requires_clarification",
+      "reasoning": "The clause imposes notification requirements on the Service Provider without any corresponding obligation on the Customer, creating an unbalanced commercial relationship.",
+      "recommended_action": "Introduce mutual audit rights for both Parties to ensure fairness."
+    },
+    {
+      "recommendation_id": "rec_2122e26cd2ca86b4",
+      "clause_id": "clause_06a4c813bb0f52f1",
+      "issue_type": "Ambiguity",
+      "classification": "requires_clarification",
+      "reasoning": "The clause lacks clarity on compliance standards, making it difficult to determine compliance obligations or measure performance.",
+      "recommended_action": "Replace 'promptly notify' with objective standard such as 'notify within 24 hours'."
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "dec_fb4fdf20e719b0de",
+      "recommendation_id": "rec_dfdc61ce232e6cf1",
+      "decision_type": "apply",
+      "actor": "Rachel Kim",
+      "role": "Partner",
+      "timestamp": "2025-07-17T21:37:14.356173Z",
+      "notes": "Approved as recommended by legal team."
+    },
+    {
+      "decision_id": "dec_7ea9d0dc413cdd86",
+      "recommendation_id": "rec_e73bd89db5764380",
+      "decision_type": "apply",
+      "actor": "James Wilson",
+      "role": "Associate",
+      "timestamp": "2025-07-20T15:37:14.356173Z",
+      "notes": "Risk level justifies this change. Proceeding with modification."
+    },
+    {
+      "decision_id": "dec_d600f23fd4f5cb11",
+      "recommendation_id": "rec_7047ea9de327243b",
+      "decision_type": "override",
+      "actor": "Jessica Martinez",
+      "role": "Senior Counsel",
+      "timestamp": "2025-07-18T10:37:14.356173Z",
+      "notes": "Already addressed in separate side letter agreement."
+    },
+    {
+      "decision_id": "dec_fc7224a75db642cd",
+      "recommendation_id": "rec_24e4a3c49f04e5b1",
+      "decision_type": "apply",
+      "actor": "Michael Roberts",
+      "role": "Partner",
+      "timestamp": "2025-07-19T13:37:14.356173Z",
+      "notes": "Agreed - Introduce mutual audit rights for both Parties to ensure fairness...."
+    },
+    {
+      "decision_id": "dec_4c058faa5550a812",
+      "recommendation_id": "rec_2122e26cd2ca86b4",
+      "decision_type": "override",
+      "actor": "Rachel Kim",
+      "role": "Partner",
+      "timestamp": "2025-07-19T02:37:14.356173Z",
+      "notes": "Acceptable risk given fee structure and contract value."
+    }
+  ],
+  "concessions": []
+}
