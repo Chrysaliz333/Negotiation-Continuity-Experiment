@@ -73,10 +73,18 @@ def init_connection():
     """Initialize FalkorDB connection"""
     # Check Streamlit secrets first (for cloud deployment), then environment variables (for local)
     try:
-        use_cloud = st.secrets.get('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
-        cloud_host = st.secrets.get('FALKORDB_CLOUD_HOST')
-        cloud_port = st.secrets.get('FALKORDB_CLOUD_PORT')
-        cloud_password = st.secrets.get('FALKORDB_CLOUD_PASSWORD')
+        # Try TOML nested structure first (Streamlit Cloud format)
+        use_cloud = st.secrets.get('use_falkordb_cloud', False)
+        if use_cloud and 'falkordb_cloud' in st.secrets:
+            cloud_host = st.secrets['falkordb_cloud']['host']
+            cloud_port = st.secrets['falkordb_cloud']['port']
+            cloud_password = st.secrets['falkordb_cloud']['password']
+        else:
+            # Fallback to flat structure
+            use_cloud = st.secrets.get('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
+            cloud_host = st.secrets.get('FALKORDB_CLOUD_HOST')
+            cloud_port = st.secrets.get('FALKORDB_CLOUD_PORT')
+            cloud_password = st.secrets.get('FALKORDB_CLOUD_PASSWORD')
     except:
         # Fallback to environment variables for local development
         use_cloud = os.getenv('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
