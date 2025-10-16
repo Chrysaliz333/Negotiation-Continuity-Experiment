@@ -51,16 +51,15 @@ class NaturalLanguageQueryInterface:
                 "description": "Find all concessions made during negotiations",
                 "cypher": """
                     MATCH (d:Decision)-[:RESULTED_IN_CONCESSION]->(con:Concession)
-                    MATCH (c:Clause {clause_id: con.clause_id})
-                    RETURN con.matter_id as matter,
-                           c.clause_number as clause,
-                           c.title as clause_title,
+                    RETURN DISTINCT con.concession_id,
+                           con.matter_id as matter,
+                           con.clause_id as clause_id,
                            d.actor as who_made_it,
                            con.description as what_happened,
                            con.impact as impact_level,
                            con.rationale as why,
                            d.timestamp as when
-                    ORDER BY d.timestamp
+                    ORDER BY when
                 """,
                 "formatter": self._format_concessions
             },
@@ -391,8 +390,8 @@ class NaturalLanguageQueryInterface:
         output.append(f"\n🔍 Found {len(rows)} concession(s):\n")
 
         for i, row in enumerate(rows, 1):
-            matter, clause, title, who, what, impact, why, when = row
-            output.append(f"{i}. {matter} - Clause {clause}: {title}")
+            con_id, matter, clause_id, who, what, impact, why, when = row
+            output.append(f"{i}. {matter} - Clause ID: {clause_id}")
             output.append(f"   Who: {who}")
             output.append(f"   What: {what}")
             output.append(f"   Impact: {impact}")
