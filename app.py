@@ -75,17 +75,20 @@ def init_connection():
     try:
         # Try TOML nested structure first (Streamlit Cloud format)
         use_cloud = st.secrets.get('use_falkordb_cloud', False)
+        print(f"DEBUG: use_cloud from secrets = {use_cloud}")
         if use_cloud and 'falkordb_cloud' in st.secrets:
             cloud_host = st.secrets['falkordb_cloud']['host']
             cloud_port = st.secrets['falkordb_cloud']['port']
             cloud_password = st.secrets['falkordb_cloud']['password']
+            print(f"DEBUG: Connecting to cloud at {cloud_host}:{cloud_port}")
         else:
             # Fallback to flat structure
             use_cloud = st.secrets.get('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
             cloud_host = st.secrets.get('FALKORDB_CLOUD_HOST')
             cloud_port = st.secrets.get('FALKORDB_CLOUD_PORT')
             cloud_password = st.secrets.get('FALKORDB_CLOUD_PASSWORD')
-    except:
+    except Exception as e:
+        print(f"DEBUG: Exception reading secrets: {e}")
         # Fallback to environment variables for local development
         use_cloud = os.getenv('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
         cloud_host = os.getenv('FALKORDB_CLOUD_HOST')
@@ -94,16 +97,25 @@ def init_connection():
 
     if use_cloud and cloud_host and cloud_password:
         # Connect to FalkorDB Cloud
-        return FalkorDB(
-            host=cloud_host,
-            port=int(cloud_port) if cloud_port else 6379,
-            password=cloud_password,
-            ssl=True,
-            ssl_cert_reqs='none',
-            socket_connect_timeout=30
-        )
+        print(f"DEBUG: Attempting cloud connection to {cloud_host}:{cloud_port}")
+        try:
+            db = FalkorDB(
+                host=cloud_host,
+                port=int(cloud_port) if cloud_port else 6379,
+                password=cloud_password,
+                ssl=True,
+                ssl_cert_reqs='none',
+                socket_connect_timeout=10,
+                socket_timeout=10
+            )
+            print("DEBUG: Cloud connection successful!")
+            return db
+        except Exception as e:
+            print(f"DEBUG: Cloud connection failed: {e}")
+            raise
     else:
         # Connect to local FalkorDB
+        print("DEBUG: Using local connection")
         return FalkorDB(host='127.0.0.1', port=6379)
 
 @st.cache_resource
