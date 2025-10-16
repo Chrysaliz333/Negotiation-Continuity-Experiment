@@ -94,13 +94,12 @@ def init_connection():
 
     if use_cloud and cloud_host and cloud_password:
         # Connect to FalkorDB Cloud
-        import ssl
         return FalkorDB(
             host=cloud_host,
             port=int(cloud_port) if cloud_port else 6379,
             password=cloud_password,
             ssl=True,
-            ssl_cert_reqs=ssl.CERT_NONE,
+            ssl_cert_reqs='none',
             socket_connect_timeout=30
         )
     else:
