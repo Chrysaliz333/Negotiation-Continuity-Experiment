@@ -12,6 +12,10 @@ import plotly.graph_objects as go
 import tempfile
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Import the natural language query interface
 import sys
@@ -61,7 +65,24 @@ st.markdown("""
 @st.cache_resource
 def init_connection():
     """Initialize FalkorDB connection"""
-    return FalkorDB(host='localhost', port=6379)
+    # Check if cloud credentials are available
+    use_cloud = os.getenv('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
+
+    if use_cloud:
+        # Connect to FalkorDB Cloud
+        cloud_host = os.getenv('FALKORDB_CLOUD_HOST')
+        cloud_port = int(os.getenv('FALKORDB_CLOUD_PORT', '6379'))
+        cloud_password = os.getenv('FALKORDB_CLOUD_PASSWORD')
+
+        return FalkorDB(
+            host=cloud_host,
+            port=cloud_port,
+            password=cloud_password,
+            ssl=True
+        )
+    else:
+        # Connect to local FalkorDB
+        return FalkorDB(host='localhost', port=6379)
 
 @st.cache_resource
 def init_nl_interface():
