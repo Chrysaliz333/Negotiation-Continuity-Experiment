@@ -23,9 +23,9 @@ sys.path.append(str(Path(__file__).parent))
 try:
     from scripts.nl_query import NaturalLanguageQueryInterface
     NL_QUERY_AVAILABLE = True
-except ImportError:
+except (ImportError, KeyError) as e:
     NL_QUERY_AVAILABLE = False
-    print("⚠️ Natural Language Query interface not available")
+    print(f"⚠️ Natural Language Query interface not available: {e}")
 
 # Page configuration
 st.set_page_config(
