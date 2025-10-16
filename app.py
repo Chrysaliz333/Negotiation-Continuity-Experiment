@@ -82,7 +82,7 @@ def init_connection():
         )
     else:
         # Connect to local FalkorDB
-        return FalkorDB(host='localhost', port=6379)
+        return FalkorDB(host='127.0.0.1', port=6379)
 
 @st.cache_resource
 def init_nl_interface():
