@@ -20,7 +20,12 @@ load_dotenv()
 # Import the natural language query interface
 import sys
 sys.path.append(str(Path(__file__).parent))
-from scripts.nl_query import NaturalLanguageQueryInterface
+try:
+    from scripts.nl_query import NaturalLanguageQueryInterface
+    NL_QUERY_AVAILABLE = True
+except ImportError:
+    NL_QUERY_AVAILABLE = False
+    print("⚠️ Natural Language Query interface not available")
 
 # Page configuration
 st.set_page_config(
@@ -65,18 +70,24 @@ st.markdown("""
 @st.cache_resource
 def init_connection():
     """Initialize FalkorDB connection"""
-    # Check if cloud credentials are available
-    use_cloud = os.getenv('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
-
-    if use_cloud:
-        # Connect to FalkorDB Cloud
+    # Check Streamlit secrets first (for cloud deployment), then environment variables (for local)
+    try:
+        use_cloud = st.secrets.get('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
+        cloud_host = st.secrets.get('FALKORDB_CLOUD_HOST')
+        cloud_port = st.secrets.get('FALKORDB_CLOUD_PORT')
+        cloud_password = st.secrets.get('FALKORDB_CLOUD_PASSWORD')
+    except:
+        # Fallback to environment variables for local development
+        use_cloud = os.getenv('USE_FALKORDB_CLOUD', 'false').lower() == 'true'
         cloud_host = os.getenv('FALKORDB_CLOUD_HOST')
-        cloud_port = int(os.getenv('FALKORDB_CLOUD_PORT', '6379'))
+        cloud_port = os.getenv('FALKORDB_CLOUD_PORT')
         cloud_password = os.getenv('FALKORDB_CLOUD_PASSWORD')
 
+    if use_cloud and cloud_host and cloud_password:
+        # Connect to FalkorDB Cloud
         return FalkorDB(
             host=cloud_host,
-            port=cloud_port,
+            port=int(cloud_port) if cloud_port else 6379,
             password=cloud_password,
             ssl=True
         )
@@ -249,7 +260,7 @@ def main():
     try:
         db = init_connection()
         graph = db.select_graph('negotiation_continuity')
-        nl_interface = init_nl_interface()
+        nl_interface = init_nl_interface() if NL_QUERY_AVAILABLE else None
     except Exception as e:
         st.error(f"❌ Failed to connect to FalkorDB: {e}")
         st.info("💡 Make sure FalkorDB is running: `docker start falkordb`")
@@ -296,6 +307,11 @@ def main():
 
     with tab1:
         st.header("Ask Questions in Natural Language")
+
+        if not NL_QUERY_AVAILABLE:
+            st.warning("⚠️ Natural Language Query feature is currently unavailable. Please use the Graph Visualization and KPI Dashboard tabs.")
+            st.info("The query interface requires additional setup. Contact the administrator for assistance.")
+            return
 
         # Example questions
         with st.expander("💡 Example Questions", expanded=False):
